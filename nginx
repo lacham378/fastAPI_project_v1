@@ -1,0 +1,23 @@
+# NGINX configs: 
+# setting http://reverse_proxy.nginx.org/  
+
+server {
+    	listen 80 ;
+	listen [::]:80 ;
+
+	server_name_; 	# replace with your domain name x.x.xx.com
+	
+	locatin / {
+		proxy_pass http://localhost:8000; # URL/main/path:port
+		proxy_http_version 1.1;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection 'upgrade';
+		proxy_set_header Host $http_host;
+		proxy_set_header X-NginX-Proxy true;
+		proxy_redirect off;
+
+	}
+
+}
