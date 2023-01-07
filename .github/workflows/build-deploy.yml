@@ -1,0 +1,37 @@
+name: Build and Deploy Code
+
+
+on: [push, pull_request]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v2
+      - name: fast API Github repo 
+        run: echo "hello git pull"
+
+
+
+
+
+
+  # push:
+  #   branches: 
+  #     - "main"
+  #     - "a_branch"
+  #     - "b_branch"
+  #     - "c_branch"
+  # pull_request:
+  #   branches:
+  #     - "test_branch"
+
+# Sequence of patterns matched against refs/tags
+#     tags:        
+#       - v2
+#       - v1.*
+      
+
+      
+      

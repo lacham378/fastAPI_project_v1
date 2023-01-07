@@ -10,7 +10,7 @@
 # from sqlalchemy.orm import Session
 # from . import models, schemas, utils
 # from . database import engine, get_db
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from . import models
 from . database import engine
@@ -71,7 +71,7 @@ app.include_router(vote.router)
 # Get method url:"/"
 @app.get("/")
 def root():
-    return {"message": "Welcome to IPDXHUB.LIVE FastAPI"}
+    return {"message": "Welcome to IPDXHUB.LIVE FastAPI 2022"}
 
 # Get a receive method url:"/sqlalchemy"
 # @app.get("/sqlalchemy")
