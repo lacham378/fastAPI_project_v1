@@ -5,8 +5,9 @@ on: [push, pull_request]
 jobs:
   build:
     environment:
-      test_lab
       production
+      test_lab
+      
     env:
       DB_HOSTNAME: ${{secrets.DB_HOSTNAME}}
       DB_PORT: ${{secrets.DB_PORT}}
