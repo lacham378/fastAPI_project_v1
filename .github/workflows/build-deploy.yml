@@ -90,7 +90,8 @@ jobs:
       # login to ubuntu server
       # cd app/src
       # git pull
-      # systemctl restart api 
+      # systemctl restart api
+
       - name: deploy to ubuntu-server
         uses: appleboy/ssh-action@master
         with:
@@ -100,7 +101,8 @@ jobs:
           script: |
             cd app/src
             git pull
-            echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
+            echo ${{secrets.PROD_PASSWORD}} | 
+              sudo -S systemctl restart api
 
       # - name: fast API Github repo 
       #   run: echo "hello git pull"
