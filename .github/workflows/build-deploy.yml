@@ -6,6 +6,7 @@ jobs:
   build:
     environment:
       test_lab
+      production
     env:
       DB_HOSTNAME: ${{secrets.DB_HOSTNAME}}
       DB_PORT: ${{secrets.DB_PORT}}
