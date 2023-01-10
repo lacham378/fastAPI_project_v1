@@ -90,7 +90,7 @@ jobs:
           password: ${{secrets.PROD_PASSWORD}}
           port: ${{secrets.PROD_PORT}}
           script: |
-            cd app/src
+            cd /home/app/src
             git pull
             echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
 

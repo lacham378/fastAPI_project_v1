@@ -71,7 +71,7 @@ app.include_router(vote.router)
 # Get method url:"/"
 @app.get("/")
 def root():
-    return {"message": "IPDXHUB.LIVE FastAPI" "Successfully Deployed CI/DC Pipeline on Ubuntu Server"}
+    return {"message": "IPDXHUB.LIVE FastAPI" "Deployed CI/DC Pipeline on Ubuntu Server"}
 
 # Get a receive method url:"/sqlalchemy"
 # @app.get("/sqlalchemy")
