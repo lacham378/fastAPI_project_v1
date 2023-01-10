@@ -92,7 +92,7 @@ jobs:
           script: |
             cd app/src
             git pull
-            echo $PASSOWRD | sudo -S systemctl restart api.service
+            echo $PROD_PASSOWRD | sudo -S systemctl restart api.service
 
 
 
