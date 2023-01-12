@@ -72,18 +72,8 @@ app.include_router(vote.router)
 # Get method url:"/"
 @app.get("/", response_class=HTMLResponse)
 def root():
-    # return {"message": "IPDXHUB.LIVE FastAPI - Sucessfully Deployed CI/DC Pipeline"}
-    html_content = """
-    <html >
-       <head >
-            <title > IPDXHUB.LIVE < /title >
-        </head >
-        <body >
-            <h1 > IPDXHUB.LIVE FastAPI - RHEL-Server Sucessfully Deployed CI/DC Pipelin </h1>
-        </body >
-    </html >
-    """
-    return HTMLResponse(content=html_content, status_code=200)
+    return {"message": "IPDXHUB.LIVE FastAPI - RHEL-Server Sucessfully Deployed CI/DC Pipeline"}
+   
 
 
 # Get a receive method url:"/sqlalchemy"
