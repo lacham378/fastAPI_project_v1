@@ -96,6 +96,7 @@ jobs:
             git pull
             echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api
             ls -al
+            whoami
 
         
 
