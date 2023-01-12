@@ -16,6 +16,7 @@ from . import models
 from . database import engine
 from .routers import post, user, auth, vote
 from .config import settings
+from fastapi.responses import HTMLResponse
 
 
 print(settings.db_username)
@@ -69,9 +70,20 @@ app.include_router(vote.router)
 
 
 # Get method url:"/"
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def root():
-    return {"message": "IPDXHUB.LIVE FastAPI - Sucessfully Deployed CI/DC Pipeline"}
+    #return {"message": "IPDXHUB.LIVE FastAPI - Sucessfully Deployed CI/DC Pipeline"}
+    return """
+    <html >
+       <head >
+            <title > IPDXHUB.LIVE < /title >
+        </head >
+        <body >
+            <h1 > IPDXHUB.LIVE FastAPI - Sucessfully Deployed CI/DC Pipelin </h1>
+        </body >
+    </html >
+    """
+
 
 # Get a receive method url:"/sqlalchemy"
 # @app.get("/sqlalchemy")
